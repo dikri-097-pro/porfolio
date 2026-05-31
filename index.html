@@ -15,12 +15,25 @@
       color: #333;
     }
 
+    /* ANIMASI MASUK */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     /* HEADER */
     .header {
       background: linear-gradient(135deg, #2c3e50, #3498db);
       color: white;
       text-align: center;
       padding: 80px 20px;
+      animation: fadeUp 1s ease;
     }
 
     .header h1 {
@@ -41,6 +54,14 @@
       border-radius: 12px;
       padding: 30px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      animation: fadeUp 1s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* HOVER EFEK KARTU */
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
     .section h2 {
@@ -67,15 +88,25 @@
       padding: 6px 16px;
       margin: 5px;
       font-size: 14px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* KONTAK LINK */
+    /* HOVER EFEK BADGE */
+    .skill:hover {
+      background-color: #3498db;
+      color: white;
+      cursor: default;
+    }
+
+    /* KONTAK */
     .kontak a {
       color: #3498db;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .kontak a:hover {
+      color: #2c3e50;
       text-decoration: underline;
     }
 
@@ -110,7 +141,7 @@
 
   <div class="section kontak">
     <h2>Kontak</h2>
-    <p>📧 Email: <a href="mailto:muhamaddikri097@gmail.com">emailkamu@gmail.com</a></p>
+    <p>📧 Email: <a href="mailto:emailkamu@gmail.com">muhamaddikri097@gmail.com</a></p>
     <p>📱 Instagram: <a href="#">@dikri_404</a></p>
     <p>💼 LinkedIn: <a href="#">linkedin.com/in/namakamu</a></p>
   </div>
